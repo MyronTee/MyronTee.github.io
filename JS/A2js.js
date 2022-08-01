@@ -88,7 +88,6 @@ const scrollTop = function () {
   const scrollBtn = document.createElement("button");
   // creates arrow as text
   scrollBtn.innerHTML = "&uarr;";
-  scrollBtn.style.top = window.scrollY + 20;
   //set id
   scrollBtn.setAttribute("id", "scroll-btn");
   document.body.appendChild(scrollBtn);

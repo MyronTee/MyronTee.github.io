@@ -32,133 +32,67 @@ main{line-height:  1.25em;}
 
 /*    GENERAL USE    */
 /* General Container */
+
+
+
 .container-half{
 	max-width: 100%;
-	display: grid;
-	grid-template-columns: 50% 50%;
-	padding-top: 0;
-	margin-top: 10%;
+	padding: 5%;
+	margin: 5%;
 }
 
-.fashion{
-	padding: 2%;
-	padding-left: 5%;
-	margin-bottom: 10%;
-	margin-left: 15%;
+.fashion,
+.functions,
+.reliable{
+	padding: 5%;
+	margin: 10%;
 	color:white;
-	grid-column: 1; 
-	grid-row: 1; 
 	background-color: rgba(128, 128, 128, 0.2);
-	border-bottom: 3px white;
+	
 }
 
-.fashion-img{
-	padding: 2%;
-	padding-top: 10%;
-	margin-bottom: 10%;
-	margin-right: 15%;
-	color:white;
-	grid-column: 2; 
-	grid-row: 1; 
-	/* background-color: rgba(128, 128, 128, 0.2); */
-	border-bottom: 3px white;
+.fashion-img,
+.functions-img,
+.reliable-img{
+	margin: 5%;
+	padding: 5%;
 }
 
-.fashion1{
-	position: relative;
-	z-index: 2;
-	width: 55%;
-	left: 20%;
-	border-radius: 25%;
-	top: -10%;
-	border: 5px solid rgb(88, 88, 88);
-}
-
+.fashion1,
 .fashion2{
-	position: relative;
-	z-index: 1;
-	top: 0%;
-	left: 20%;
-	width: 55%;
+	width: 70%;
+	margin: 5%;
 	border-radius: 25%;
 	border: 5px solid rgb(88, 88, 88);
 }
 
-.functions{
-	padding: 2%;
-	padding-left: 5%;
-	margin-bottom: 10%;
-	margin-right: 15%;
-	color:white;
-	grid-column: 2; 
-	grid-row: 2; 
-	background-color: rgba(128, 128, 128, 0.2);
-	border-bottom: 3px white;
-}
-
-.functions-img{
-	padding: 2%;
-	margin-bottom: 10%;
-	margin-left: 15%;
-	color:white;
-	grid-column: 1; 
-	grid-row: 2; 
-}
-
-.funct1{
+.funct1,
+.funct2,
+.funct3{
 	position: relative;
-	z-index: 2;
-	width: 40%;
-	left: 10%;
-	border-radius: 50%;
-	border: 5px solid rgb(88, 88, 88);
-}
-
-.funct2{
-	position: relative;
-	z-index: 1;
-	width: 40%;
-	top: 25%;
+	width: 45%;
+	top: 10%;
 	left: 5%;
 	border-radius: 50%;
 	border: 5px solid rgb(88, 88, 88);
 }
 
+.funct2{
+	top: 35%;
+}
+
 .funct3{
-	position: relative;
-	z-index: 3;
-	width: 40%;
-	left: 10%;
-	border-radius: 50%;
-	border: 5px solid rgb(88, 88, 88);
+	top: 20%;
 }
 
-.reliable{
-	padding: 2%;
-	padding-left: 5%;
-	margin-bottom: 10%;
-	margin-left: 15%;
-	color:white;
-	grid-column: 1; 
-	grid-row: 3; 
-	background-color: rgba(128, 128, 128, 0.2);
-	border-bottom: 3px white; 
-}
-
-.reliable-img{
-	padding: 2%;
-	margin-bottom: 10%;
-	margin-left: 15%;
-	color:white;
-	grid-column: 2; 
-	grid-row: 3; 
-}
-
-.shock1, .shock2, .shock3{
+.shock1, 
+.shock2, 
+.shock3{
 	transform: rotate(-45deg);
 	position: relative;
-	width: 25%;
-	top:10%;
+	width: 35%;
+	left: 5%;
+	top:20%;
 	border-radius: 10%;
 	border: 5px solid rgb(88, 88, 88);
 }
@@ -168,7 +102,8 @@ main{line-height:  1.25em;}
 	left: -5%;
 }
 .shock3{
-	left: -10%;
+	left: 61%;
+	top: -15%;
 }
 
 
@@ -201,6 +136,76 @@ main{line-height:  1.25em;}
 	display: grid;
 	grid-template-rows: 33% 33% 33%;
 }
+
+
+
+
+
+
+@media screen and (max-width: 1920px) {
+	.fashion {order: 1;}	
+	.fashion-img {order: 2;}
+	.functions-img {order: 3;}
+	.functions {order: 4;}
+	.reliable {order: 5;}
+	.reliable-img {order: 6;}
+
+	.container-half{
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+}
+@media screen and (max-width: 1180px) {
+	.container-half, 
+	.fashion-img, 
+	.fashion,
+	.functions,
+	.functions-img,
+	.reliable,
+	.reliable-img{
+		display: flex;
+		flex-direction: column;
+		order:unset;
+	}
+	.fashion-img,
+	.functions-img,
+	.reliable-img{
+		width:50%;
+		flex-direction: row;
+		margin: 0;
+	}
+	.fashion-img{margin-left: 5%;}
+	.functions-img{margin-left: 10%;}
+	.reliable-img{margin-left: 15%;}
+	.fashion,
+	.functions,
+	.reliable{
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.shock1,
+	.shock2,
+	.shock3,
+	.funct1,
+	.funct2,
+	.funct3{
+		top: unset;
+		left: unset;
+	}
+}
+
+@media screen and (max-width: 450px) {
+
+}
+
+
+
+
+
+
+
+
+
 
 /* Images */
 /* makes Images reposition accordingly */
@@ -269,7 +274,7 @@ html {
 
 /* banner settings */
 .banner {
-	padding: 21em 0;
+	padding: 15em 0;
 	text-align: center;
 	box-shadow: 0 15px 20px #444;	
 	animation: load 1.5s;
@@ -440,7 +445,7 @@ b.ease:hover:before {
     background-color: #000000;
     position: fixed;
     bottom: 10%;
-    right: 10%;    
+    right: 2%;    
     border: 2px solid #fff;
     border-radius: 50%; 
     font: bold 20px monospace;       
