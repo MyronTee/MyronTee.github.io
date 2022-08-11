@@ -11,16 +11,35 @@
 
 <body>
      <!--navigation bar for pages-->
-     <nav class="topnav">
-        <!--icon for website-->
-        <img src="images/navicon.jpg" alt="navbar-icon" class="nav-icon">
-        <ul> 
-            <li><a href= "index.html"> <b class="onpage">Introduction</b></a></li>
-            <li><a href= "types.html"> <b class="ease">Types</b></a></li>
-            <li><a href= "parts.html"> <b class="ease">Parts</b></a></li>
-            <li><a href= "value.html"> <b class="ease">Value</b> </a></li>
-        </ul>
-    </nav>
+     <header class="header">
+        <nav class="navbar">
+            <img src="images/navicon.jpg" alt="navbar-icon" class="nav-logo">
+            <h1>Introduction</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link onpage">Introduction</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="types.html" class="nav-link ease">Types</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="parts.html" class="nav-link ease">Parts</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="value.html" class="nav-link ease">Value</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
 
     <div class="slideshow">
         <div class="slides fade">
@@ -35,18 +54,15 @@
             <img src="images/atlantic.jpg" class="slideimg" alt="Watchhome">
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
         
     </div>
-
-    
-
-    <!-- The dots/circles -->
+    <!-- The dots/bars -->
     <div class="slideshowptr">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
 
     <!---Introduction Content-->
@@ -66,7 +82,7 @@
 
         <div class="title js-scroll">
             <h1>
-                So Why Should We Wear Watches?
+                So Why Wear Watches?
             </h1>
         </div>
 
